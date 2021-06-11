@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [SiteController::class, 'registerPage']);
-Route::get('/solicitudes', [SiteController::class, 'solicitudesPage']);
+Route::get('/', [SiteController::class, 'registerPage'])->name('home');
+Route::get('/solicitudes', [SiteController::class, 'solicitudesPage'])->name('solicitudes');
 Route::get('/solicitudes/{id}', [SiteController::class, 'detailsPage']);
 Route::post('/register', [SiteController::class, 'store']);
